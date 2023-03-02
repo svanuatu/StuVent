@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLController">
+   <left>
+      <AnchorPane prefHeight="407.0" prefWidth="228.0" style="-fx-background-color: #263F73;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="2.0" layoutY="143.0" prefHeight="17.0" prefWidth="217.0" text="StuVent" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="27.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="6.0" layoutY="190.0" prefHeight="17.0" prefWidth="217.0" text="Login Portal" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="8.0" layoutY="366.0" prefHeight="17.0" prefWidth="217.0" text="DHS" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="407.0" prefWidth="332.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="43.0" layoutY="35.0" prefHeight="17.0" prefWidth="217.0" text="Student Account">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="usernameLabel" alignment="CENTER" layoutX="-21.0" layoutY="116.0" prefHeight="38.0" prefWidth="165.0" text="Username">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="passwordLabel" alignment="CENTER" layoutX="-21.0" layoutY="162.0" prefHeight="38.0" prefWidth="165.0" text="Password">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="loginButton" layoutX="14.0" layoutY="258.0" mnemonicParsing="false" onAction="#btnLoginClicked" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #263F73;" text="Login" textFill="WHITE" />
+            <PasswordField fx:id="passwordPasswordField" layoutX="108.0" layoutY="162.0" promptText="Password" />
+            <Button fx:id="cancelButton" layoutX="15.0" layoutY="313.0" mnemonicParsing="false" onAction="#btnCancelClicked" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #263F73;" text="Cancel" textFill="#fcfcfc" />
+            <TextField fx:id="usernameTextField" layoutX="108.0" layoutY="116.0" promptText="Student ID" />
+            <Label fx:id="welcomeLabel" layoutX="29.0" layoutY="216.0" />
+            <Label fx:id="errorLabel" layoutX="112.0" layoutY="77.0" textFill="#ff1616" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
