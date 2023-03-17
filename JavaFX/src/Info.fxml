@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InfoController">
+   <children>
+      <AnchorPane fx:id="screen" prefHeight="515.0" prefWidth="943.0">
+         <children>
+            <Label fx:id="top2" layoutX="39.0" layoutY="109.0" text="Q1: What is StuVent used for?">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="top3" layoutX="39.0" layoutY="118.0" prefHeight="89.0" prefWidth="245.0" text="A1: StuVent is an interactive navigation platform that connects School Events with Students in an easy to navigate way." wrapText="true" />
+            <Label fx:id="top6" layoutX="355.0" layoutY="218.0" prefHeight="79.0" prefWidth="234.0" text="A5: Yes, in the &quot;Leaderboard&quot; and &quot;Profile&quot; tabs, it displays possible prizes a Student can win, depending on placement. " wrapText="true" />
+            <Label fx:id="top9" layoutX="350.0" layoutY="297.0" prefHeight="125.0" prefWidth="179.0" text="A6: The school funds the prizes, usually with fundraising, so prizes can vary in size and cope. Some common ones are Electronics, Trips, and Awards" wrapText="true" />
+            <Text layoutX="178.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Q U E S T I O N S       A N D      A N S W E R S">
+               <font>
+                  <Font name="System Italic" size="28.0" />
+               </font>
+            </Text>
+            <Label fx:id="top31" layoutX="618.0" layoutY="110.0" prefHeight="89.0" prefWidth="245.0" text="A7: The points are judged at the end of every quarter, typically with a 1 week notice. " wrapText="true" />
+            <Label fx:id="top32" layoutX="31.0" layoutY="234.0" prefHeight="89.0" prefWidth="245.0" text="2A: Students earn points by registering for Events. In the &quot;Upcoming Events&quot; tab, a student can register for any event listed, they will get a code to participate, and a confirmation code after the event, to recieve points" wrapText="true" />
+            <Label fx:id="top23" layoutX="341.0" layoutY="289.0" text="Q6: What types of Prizes are there?">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="top22" layoutX="31.0" layoutY="210.0" text="Q2: How do Students earn points?">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="top221" layoutX="39.0" layoutY="330.0" text="Q3: Is there a limit to the points a Student can earn?">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="top311" layoutX="31.0" layoutY="347.0" prefHeight="89.0" prefWidth="245.0" text="A3: No, Students can earn points by participating in events, which do not have a limit. However, it usually ends on a quarterly basis. " wrapText="true" />
+            <Label fx:id="top2211" layoutX="334.0" layoutY="110.0" text="Q4: Are Students already enrolled in StuVent? ">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="top3111" layoutX="349.0" layoutY="128.0" prefHeight="89.0" prefWidth="245.0" text="A4: Yes, Students are enrolled in StuVent when they are enrolled in the School. Additionally, Admin accounts can add/remove a student from the system" wrapText="true" />
+            <Label fx:id="top22111" layoutX="340.0" layoutY="210.0" text="Q5: Can Students see what they may earn?">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="top231" layoutX="618.0" layoutY="110.0" text="Q7: How much time do Students have?">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

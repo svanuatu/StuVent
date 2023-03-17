@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UpcomingEventsController">
+   <children>
+      <AnchorPane fx:id="screen" prefHeight="515.0" prefWidth="943.0">
+         <children>
+            <Text layoutX="243.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="U P C O M I N G    E V E N T S">
+               <font>
+                  <Font name="System Italic" size="36.0" />
+               </font>
+            </Text>
+            <AnchorPane layoutX="-2.0" layoutY="90.0" prefHeight="422.0" prefWidth="950.0">
+               <children>
+                  <AnchorPane layoutX="14.0" layoutY="39.0" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #CBC17F;">
+                     <children>
+                        <Button fx:id="eventLabel1" layoutX="45.0" layoutY="6.0" mnemonicParsing="false" style="-fx-background-color: #90832F;" text="Schloarship Night" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="eventButton1" layoutX="8.0" layoutY="2.0" mnemonicParsing="false" onAction="#loadevent1" style="-fx-background-color: #90832F;" text="☑" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="250.0" layoutY="39.0" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #CBC17F;">
+                     <children>
+                        <Button fx:id="eventLabel11" layoutX="45.0" layoutY="6.0" mnemonicParsing="false" style="-fx-background-color: #90832F;" text="Basketball Game" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="eventButton2" layoutX="8.0" layoutY="2.0" mnemonicParsing="false" onAction="#loadevent2" style="-fx-background-color: #90832F;" text="☑" textFill="#fff6f6">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="489.0" layoutY="39.0" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #CBC17F;">
+                     <children>
+                        <Button fx:id="eventLabel111" layoutX="45.0" layoutY="6.0" mnemonicParsing="false" style="-fx-background-color: #90832F;" text="Climate Project" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="eventButton3" layoutX="8.0" layoutY="2.0" mnemonicParsing="false" onAction="#loadevent3" style="-fx-background-color: #90832F;" text="☑" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="register1" layoutX="14.0" layoutY="75.0" prefHeight="124.0" prefWidth="200.0" style="-fx-background-color: #C5D4E2;">
+                     <children>
+                        <Label layoutX="10.0" layoutY="2.0" prefHeight="89.0" prefWidth="181.0" text="Schlorarship night at DHS provides an interactive learning enviroment with engaging activies, resources, and workshops!" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="register" layoutX="140.0" layoutY="91.0" mnemonicParsing="false" style="-fx-background-color: #B2C6D8;" text="Register" textFill="WHITE" />
+                     </children></AnchorPane>
+                  <AnchorPane fx:id="register2" layoutX="250.0" layoutY="75.0" prefHeight="124.0" prefWidth="200.0" style="-fx-background-color: #C5D4E2;">
+                     <children>
+                        <Label layoutX="14.0" prefHeight="89.0" prefWidth="181.0" text="Watch the Titans compete against the Bulls in an fun filled night of food, beverages, and activies! Try your skills by joining the Basketball Club today!" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="register4" layoutX="135.0" layoutY="91.0" mnemonicParsing="false" style="-fx-background-color: #B2C6D8;" text="Register" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="register3" layoutX="489.0" layoutY="75.0" prefHeight="124.0" prefWidth="200.0" style="-fx-background-color: #C5D4E2;">
+                     <children>
+                        <Label layoutX="10.0" prefHeight="89.0" prefWidth="181.0" text="Suport nature by thanking it! DHS Climate Change Club is fundraising to plant 1000 trees by the end of the month, Prizes for the top planters!" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="register41" layoutX="137.0" layoutY="91.0" mnemonicParsing="false" style="-fx-background-color: #B2C6D8;" text="Register" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="14.0" layoutY="228.0" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #CBC17F;">
+                     <children>
+                        <Button fx:id="eventLabel12" layoutX="45.0" layoutY="6.0" mnemonicParsing="false" style="-fx-background-color: #90832F;" text="Debate Competition" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="eventButton11" layoutX="8.0" layoutY="2.0" mnemonicParsing="false" onAction="#loadevent1" style="-fx-background-color: #90832F;" text="☑" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="register11" layoutX="250.0" layoutY="264.0" prefHeight="124.0" prefWidth="200.0" style="-fx-background-color: #C5D4E2;">
+                     <children>
+                        <Label layoutX="10.0" layoutY="2.0" prefHeight="89.0" prefWidth="181.0" text="Practice your public speaking skills with a Debate Mockup Competition. Emulate a real debate without the stress. " wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="register1" layoutX="140.0" layoutY="91.0" mnemonicParsing="false" style="-fx-background-color: #B2C6D8;" text="Register" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="register31" layoutX="719.0" layoutY="75.0" prefHeight="124.0" prefWidth="200.0" style="-fx-background-color: #C5D4E2;">
+                     <children>
+                        <Label layoutX="10.0" prefHeight="89.0" prefWidth="181.0" text="Explore the various cultures at our school, learn about what makes Dominion, Dominion! Engage in festivals, activies, games, and food of the 46 cultures participating!" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="register411" layoutX="137.0" layoutY="91.0" mnemonicParsing="false" style="-fx-background-color: #B2C6D8;" text="Register" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="719.0" layoutY="39.0" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #CBC17F;">
+                     <children>
+                        <Button fx:id="eventLabel1111" layoutX="45.0" layoutY="6.0" mnemonicParsing="false" style="-fx-background-color: #90832F;" text="Culture Festival" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="eventButton31" layoutX="8.0" layoutY="2.0" mnemonicParsing="false" onAction="#loadevent3" style="-fx-background-color: #90832F;" text="☑" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="250.0" layoutY="228.0" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #CBC17F;">
+                     <children>
+                        <Button fx:id="eventLabel121" layoutX="45.0" layoutY="6.0" mnemonicParsing="false" style="-fx-background-color: #90832F;" text="FBLA Presentations" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="eventButton111" layoutX="8.0" layoutY="2.0" mnemonicParsing="false" onAction="#loadevent1" style="-fx-background-color: #90832F;" text="☑" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="register111" layoutX="14.0" layoutY="264.0" prefHeight="124.0" prefWidth="200.0" style="-fx-background-color: #C5D4E2;">
+                     <children>
+                        <Label layoutX="10.0" layoutY="2.0" prefHeight="89.0" prefWidth="181.0" text="Do you have what it takes to become a future business leader? Then participate in the upcoming Regionals. We have something for everyone and more. " wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="register6" layoutX="140.0" layoutY="91.0" mnemonicParsing="false" style="-fx-background-color: #B2C6D8;" text="Register" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="register112" layoutX="489.0" layoutY="264.0" prefHeight="124.0" prefWidth="200.0" style="-fx-background-color: #C5D4E2;">
+                     <children>
+                        <Label layoutX="10.0" layoutY="2.0" prefHeight="89.0" prefWidth="181.0" text="Schlorarship night at DHS provides an interactive learning enviroment with engaging activies, resources, and workshops!" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="register7" layoutX="140.0" layoutY="91.0" mnemonicParsing="false" style="-fx-background-color: #B2C6D8;" text="Register" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="489.0" layoutY="228.0" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #CBC17F;">
+                     <children>
+                        <Button fx:id="eventLabel122" layoutX="45.0" layoutY="6.0" mnemonicParsing="false" style="-fx-background-color: #90832F;" text="Career Center Day" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="eventButton112" layoutX="8.0" layoutY="2.0" mnemonicParsing="false" onAction="#loadevent1" style="-fx-background-color: #90832F;" text="☑" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="register1121" layoutX="719.0" layoutY="264.0" prefHeight="124.0" prefWidth="200.0" style="-fx-background-color: #C5D4E2;">
+                     <children>
+                        <Label layoutX="10.0" layoutY="2.0" prefHeight="99.0" prefWidth="181.0" text="Tesr your Programming Knowledge at Virginia Commonwealth University. Join us for a fun--filled day of learning . Don't know how to Code? Come anyway, " wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="register99" layoutX="140.0" layoutY="91.0" mnemonicParsing="false" style="-fx-background-color: #B2C6D8;" text="Register" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="719.0" layoutY="228.0" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #CBC17F;">
+                     <children>
+                        <Button fx:id="eventLabel1221" layoutX="45.0" layoutY="6.0" mnemonicParsing="false" style="-fx-background-color: #90832F;" text="Coding Contest at VCU" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="eventButton1121" layoutX="8.0" layoutY="2.0" mnemonicParsing="false" onAction="#loadevent1" style="-fx-background-color: #90832F;" text="☑" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <Label fx:id="nameLabel" layoutX="144.0" layoutY="42.0" prefHeight="31.0" prefWidth="41.0" text="hi">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ProfileController">
+   <children>
+      <AnchorPane fx:id="screen" prefHeight="515.0" prefWidth="943.0">
+         <children>
+            <Text layoutX="34.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Y O U R   P R O F I L E">
+               <font>
+                  <Font name="Candara Light Italic" size="25.0" />
+               </font>
+            </Text>
+            <Text fx:id="pointsLabel" layoutX="34.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="a" wrappingWidth="415.38671875">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Text>
+            <Text fx:id="pointsLabel1" layoutX="34.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Projected prizes" wrappingWidth="415.38671875">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text fx:id="pointsLabel11" fill="#99acd1" layoutX="34.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Random Winner 1 - Drone" wrappingWidth="415.38671875">
+               <font>
+                  <Font name="Candara Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text fx:id="pointsLabel111" fill="#99acd1" layoutX="34.0" layoutY="456.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Random Winner 2 - School Vacation" wrappingWidth="415.38671875">
+               <font>
+                  <Font name="Candara Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text fx:id="pointsLabel2" layoutX="34.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Event -- FBLA Regionals Programming -- Top 2" wrappingWidth="415.38671875">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Text>
+            <Line endX="100.0" layoutX="129.0" layoutY="258.0" startX="-100.0" />
+            <Line endX="100.0" layoutX="135.0" layoutY="362.0" startX="-100.0" />
+            <ImageView fitHeight="188.0" fitWidth="234.0" layoutX="22.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/pngaaa.com-4806730%20(1).png" />
+               </image>
+            </ImageView>
+            <Label layoutX="99.0" layoutY="76.0" prefHeight="51.0" prefWidth="48.0" text="JB" textFill="#ffffff84">
+               <font>
+                  <Font name="Corbel Bold" size="25.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Text layoutX="458.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C O N F I R M    C O D E">
+               <font>
+                  <Font name="Candara Light Italic" size="25.0" />
+               </font>
+            </Text>
+            <TextField layoutX="482.0" layoutY="269.0" promptText="Event" />
+            <TextField layoutX="482.0" layoutY="305.0" promptText="Confirmation Code" />
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>
