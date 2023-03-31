@@ -26,17 +26,17 @@
                   <Font name="System Bold" size="25.0" />
                </font>
             </Text>
-            <Text fx:id="pointsLabel1" layoutX="34.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Projected prizes" wrappingWidth="415.38671875">
+            <Text fx:id="pointsLabel1" layoutX="34.0" layoutY="431.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Projected prizes" wrappingWidth="415.38671875">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
             </Text>
-            <Text fx:id="pointsLabel11" fill="#99acd1" layoutX="34.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Random Winner 1 - Drone" wrappingWidth="415.38671875">
+            <Text fx:id="pointsLabel11" fill="#99acd1" layoutX="34.0" layoutY="454.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Random Winner 1 - Drone" wrappingWidth="415.38671875">
                <font>
                   <Font name="Candara Bold" size="17.0" />
                </font>
             </Text>
-            <Text fx:id="pointsLabel111" fill="#99acd1" layoutX="34.0" layoutY="456.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Random Winner 2 - School Vacation" wrappingWidth="415.38671875">
+            <Text fx:id="pointsLabel111" fill="#99acd1" layoutX="34.0" layoutY="481.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Random Winner 2 - School Vacation" wrappingWidth="415.38671875">
                <font>
                   <Font name="Candara Bold" size="17.0" />
                </font>
@@ -66,11 +66,14 @@
                   <Font name="Candara Light Italic" size="25.0" />
                </font>
             </Text>
-            <TextField layoutX="482.0" layoutY="269.0" promptText="Event" />
+            <TextField fx:id="eventTextBox" layoutX="482.0" layoutY="269.0" promptText="Event" />
             <TextField fx:id="confirmTextBox" layoutX="482.0" layoutY="305.0" promptText="Confirmation Code" />
             <Label fx:id="errorLabel" layoutX="518.0" layoutY="348.0" text="Error" />
             <Button fx:id="confirmButton" layoutX="579.0" layoutY="344.0" mnemonicParsing="false" onAction="#btnConfirmClicked" text="CONFIRM" />
+            <TextField fx:id="enterPoint" layoutX="648.0" layoutY="269.0" promptText="Enter Points" />
+            <Text fx:id="currentEventText" layoutX="35.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Event --" />
          </children>
       </AnchorPane>
+      <Label text="Label" />
    </children>
 </HBox>

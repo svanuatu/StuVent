@@ -100,28 +100,6 @@ public class DashboardController implements Initializable {
     private void loadPage(String page) {
 FXMLLoader loader;
 Parent root = null;
-/*
-try {
-    if ("Profile".equals(page)) {
-        loader = new FXMLLoader(getClass().getResource("Profile.fxml"));
-        root = loader.load();
-        ProfileController profileController = loader.getController();
-        profileController.getPointsValue(name);
-    } else if ("UpcomingEvents".equals(page)) {
-        loader = new FXMLLoader(getClass().getResource("UpcomingEvents.fxml"));
-        root = loader.load();
-        UpcomingEventsController eventController = loader.getController();
-        eventController.getCode(name);
-    } else {
-        // Handle unknown page value
-        return;
-    }
-
-    screen.getChildren().setAll(root);
-} catch (IOException | SQLException ex) {
-    Logger.getLogger(DashboardController.class.getName()).log(Level.SEVERE, null, ex);
-} 
-*/
 
 try {
     if (page.equals("Profile"))
@@ -136,7 +114,7 @@ try {
         loader = new FXMLLoader(getClass().getResource("UpcomingEvents.fxml"));
         root = loader.load();
         UpcomingEventsController eventController = loader.getController();
-        eventController.getCode(name);
+        eventController.getStuff(name);
      }
      if (page.equals("Leaderboard"))
      {

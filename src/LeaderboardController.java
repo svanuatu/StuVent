@@ -84,8 +84,8 @@ public class LeaderboardController implements Initializable {
         ResultSet rs = null;
 
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/stuvent?zeroDateTimeBehavior=CONVERT_TO_NULL", "root", "");
-            prepare = conn.prepareStatement("SELECT name, points FROM students ORDER BY points DESC LIMIT 1 OFFSET ?");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3308/stuvent?zeroDateTimeBehavior=CONVERT_TO_NULL", "root", "1234");
+            prepare = conn.prepareStatement("SELECT name, points FROM users ORDER BY points DESC LIMIT 1 OFFSET ?");
             prepare.setInt(1, position - 1);
             rs = prepare.executeQuery();
 

@@ -67,7 +67,7 @@
                               <Font name="System Bold" size="11.0" />
                            </font>
                         </Label>
-                        <Button fx:id="register" layoutX="140.0" layoutY="91.0" mnemonicParsing="false" style="-fx-background-color: #B2C6D8;" text="Register" textFill="WHITE" />
+                        <Button fx:id="register" layoutX="140.0" layoutY="91.0" mnemonicParsing="false" onAction="#loadevent1" style="-fx-background-color: #B2C6D8;" text="Register" textFill="WHITE" />
                      </children></AnchorPane>
                   <AnchorPane fx:id="register2" layoutX="250.0" layoutY="75.0" prefHeight="124.0" prefWidth="200.0" style="-fx-background-color: #C5D4E2;">
                      <children>

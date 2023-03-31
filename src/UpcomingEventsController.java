@@ -10,6 +10,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Properties;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -24,13 +25,24 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
 
+import javax.mail.Authenticator;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.AddressException;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+import javax.swing.JOptionPane;
+
 /**
  * FXML Controller class
  *
  * @author vanua
  */
 public class UpcomingEventsController implements Initializable {
-
+String email = "";
     @FXML
     private AnchorPane screen;
     @FXML
@@ -139,7 +151,96 @@ public class UpcomingEventsController implements Initializable {
    // nameLabel.setText(n);
         
    // }
-public void getCode(String name)
+
+    public void sendEmail(String recepient) throws Exception
+    {
+                Properties props;
+		//Session session;
+		//MimeMessage message;
+
+		props = new Properties();
+              //  mail.smtp.auth;
+		props.put("mail.smtp.host", "smtp.gmail.com");
+		props.put("mail.smtp.port", "587");
+		props.put("mail.smtp.auth", "true");
+                props.put("mail.smtp.starttls.enable", "true");
+               // props.put("mail.smtp.host","smtp.gmail.com");
+		//props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+		String myEmail = "786660@lcps.org";
+                String password = "LCPS-121205";
+                
+                Session session = Session.getInstance(props, new javax.mail.Authenticator() {
+                    @Override
+                    protected PasswordAuthentication getPasswordAuthentication() {
+                        return  new PasswordAuthentication("786660@lcps.org","LCPS-121205");
+                    }
+                });
+                Message message = prepareMessage(session, myEmail, recepient);
+                
+    try {
+        Transport.send(message);
+    } catch (MessagingException ex) {
+        Logger.getLogger(UpcomingEventsController.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    }
+    public static Message prepareMessage(Session session, String myEmail, String recepient) 
+    {
+        
+    try {
+        Message message = new MimeMessage(session);
+        message = new MimeMessage(session);
+       // message.setFrom(new InternetAddress(myEmail
+        message.setFrom(new InternetAddress("stuvent677@gmail.com"));
+        message.setRecipient(Message.RecipientType.TO, new InternetAddress(recepient));
+        message.setSubject("Event Sign Up");
+        message.setText("You registered for a Foodball Game");
+        System.out.println("Email sent");
+        return message;
+    } catch (AddressException ex) {
+        ex.printStackTrace();
+    } catch (MessagingException ex) {
+        Logger.getLogger(UpcomingEventsController.class.getName()).log(Level.SEVERE, null, ex);
+    }
+            
+               return null;
+    }
+
+    
+        
+        
+    
+public void addEvent(Button event) throws Exception
+{
+     Connection conn = null;
+    PreparedStatement prepare = null;
+   //esultSet rs = null;
+    String[] array = {"Basketball","Hockey","Climate Project","Volunteer","Fundraising","Zero Day","FBLA","Debate"};
+int random = (int)(Math.random() * 8);
+    String eve = array[random];
+            try {
+        conn = DriverManager.getConnection("jdbc:mysql://localhost:3308/stuvent?zeroDateTimeBehavior=CONVERT_TO_NULL","root","1234");
+        prepare = conn.prepareStatement("UPDATE `stuvent`.`users` SET `event` = ? WHERE (`email` = '66')");
+       prepare.setString(1, eve); // use name parameter to set the PreparedStatement parameter
+      //rs = prepare.executeQuery();
+      prepare.executeUpdate();
+      
+      //FXMLLoader loader = new FXMLLoader(getClass().getResource("UpcomingEvents.fxml"));
+    //  AnchorPane anchorPane = (AnchorPane) loader.getNamespace().get("register1");
+//Button myButton = (Button) anchorPane.lookup("#register");
+    //  sendEmail("786660@lcps.org");
+       //f (rs.next()) {
+            JOptionPane.showMessageDialog(null, "Added Event!");
+            nameLabel.setText("Code " + email);
+           //ystem.out.println
+        
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+}
+        
+        
+        
+public void getStuff(String name)
 {
     System.out.println(name);
 String nameReal = "hallo";
@@ -148,54 +249,34 @@ String nameReal = "hallo";
     ResultSet rs = null;
     
     try {
-        conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/stuvent?zeroDateTimeBehavior=CONVERT_TO_NULL","root","");
-        prepare = conn.prepareStatement("SELECT email FROM students WHERE name = ?");
+        conn = DriverManager.getConnection("jdbc:mysql://localhost:3308/stuvent?zeroDateTimeBehavior=CONVERT_TO_NULL","root","1234");
+        prepare = conn.prepareStatement("SELECT email FROM users WHERE name = ?");
         prepare.setString(1, name); // use name parameter to set the PreparedStatement parameter
         rs = prepare.executeQuery();
        // String dbPoints = rs.getString("points");
        // pointsLabel.setText("Points "+dbPoints);
         
         if (rs.next()) {
-            nameReal = rs.getString("email");
+           // nameReal = rs.getString("email");
+            email = rs.getString("email");
             //System.out.println()
-            nameLabel.setText("Code " + nameReal);
+            
+            nameLabel.setText("Email " + nameReal);
         }
     } catch (SQLException e) {
         e.printStackTrace();
     }
-} /*
-    public void register(String name)
-    {
-         // int event = 4;
-    Connection conn = null;
-    PreparedStatement prepare = null;
-    ResultSet rs = null;
-    
-    try {
-        conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/stuvent?zeroDateTimeBehavior=CONVERT_TO_NULL","root","");
-        prepare = conn.prepareStatement("SELECT points FROM students WHERE name = "+name);
-        prepare.setString(1, name); // use name parameter to set the PreparedStatement parameter
-        rs = prepare.executeQuery();
-       // String dbPoints = rs.getString("points");
-       // pointsLabel.setText("Points "+dbPoints);
-        
-        if (rs.next()) {
-            pointsValue = rs.getInt("points");
-            pointsLabel.setText("Points " + pointsValue);
-        }
-    } catch (SQLException e) {
-        e.printStackTrace();
-
-    }  */
+} 
     
     
     
     
     
     @FXML
-    public void loadevent1()
+    public void loadevent1() throws Exception
     {
         loadEvent(register1);
+        addEvent(register);
     }
     @FXML
     public void loadevent2()

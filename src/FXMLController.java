@@ -105,7 +105,7 @@ private String login() {
     String email = usernameTextField.getText();
     String password = passwordPasswordField.getText();
     errorLabel.setText("");
-    String sql = "SELECT email, password, name FROM students WHERE email = ? AND password = ?";
+    String sql = "SELECT email, password, name FROM users WHERE email = ? AND password = ?";
 
     try {
         preparedStatement = con.prepareStatement(sql);
@@ -143,18 +143,6 @@ private String login() {
     }
 }
 
-
-    /* private void showDialog(String info, String header, String title)
-    {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setContentText(info);
-        alert.setHeaderText(header);
-        alert.showAndWait();
-              //alert.setContentText("Login Successful");
-        
-        
-    }
-     */
     @FXML
     private void btnCancelClicked(ActionEvent event) {
         usernameTextField.setText("");
